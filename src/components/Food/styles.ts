@@ -5,6 +5,7 @@ interface CheckProps {
 }
 
 export const Container = styled.div<CheckProps>`
+  max-width: 340px;
   background: #f0f0f5;
   border-radius: 8px;
 

@@ -17,7 +17,7 @@ interface IFoodPlate {
 type Props = {
   isOpen: boolean;
   setIsOpen: () => void;
-  handleUpdateFood: (food: Omit<IFoodPlate, 'id' | 'available'>) => Promise<void>;
+  handleUpdateFood: (food: IFoodPlate) => Promise<void>;
   editingFood: IFoodPlate
 }
 

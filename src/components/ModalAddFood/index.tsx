@@ -17,7 +17,7 @@ interface IFoodPlate {
 type Props = {
   isOpen: boolean;
   setIsOpen: () => void;
-  handleAddFood: (food: Omit<IFoodPlate, 'id' | 'available'>) => Promise<void>;
+  handleAddFood: (food: IFoodPlate) => Promise<void>;
 }
 
 export default function ModalAddFood({isOpen, setIsOpen, handleAddFood}: Props) {

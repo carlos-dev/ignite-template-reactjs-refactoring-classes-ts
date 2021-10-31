@@ -3,6 +3,7 @@ import {
   useRef,
   useState,
   useCallback,
+  InputHTMLAttributes
 } from 'react';
 
 import { useField } from '@unform/core';
@@ -14,7 +15,7 @@ type Props = {
   icon?: React.ComponentType<{ size: number }>;
 }
 
-const Input = ({ name, icon: Icon, ...rest }: Props) => {
+const Input = ({ name, icon: Icon, ...rest }: Props & InputHTMLAttributes<HTMLInputElement>) => {
   const inputRef = useRef<HTMLInputElement>(null);
   console.log(rest);
   const [isFocused, setIsFocused] = useState(false);
